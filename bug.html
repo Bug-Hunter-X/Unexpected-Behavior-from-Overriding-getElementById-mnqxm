@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Incorrect way to select an element by ID
+    document.getElementById = function(id) {
+      return document.querySelector('#' + id);
+    };
+    const myDiv = document.getElementById("myDiv");
+    myDiv.innerHTML = "This text should appear in the div.";
+  </script>
+</body>
+</html>
